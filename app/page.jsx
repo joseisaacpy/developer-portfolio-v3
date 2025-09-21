@@ -1,5 +1,6 @@
 "use client";
 import { ToastContainer } from "react-toastify";
+import { Element } from "react-scroll";
 // Components
 import Header from "@/Components/Header";
 import Home from "@/Components/Home";
@@ -13,12 +14,29 @@ export default function SinglePage() {
   return (
     <>
       <Header />
-      <Home />
-      <Sobre />
-      <Tecnologias />
-      <Projetos />
-      <Contato />
+
+      <Element name="home">
+        <Home />
+      </Element>
+
+      <Element name="sobre">
+        <Sobre />
+      </Element>
+
+      <Element name="tecnologias">
+        <Tecnologias />
+      </Element>
+
+      <Element name="projetos">
+        <Projetos />
+      </Element>
+
+      <Element name="contato">
+        <Contato />
+      </Element>
+
       <Footer />
+
       <ToastContainer autoClose={700} />
     </>
   );

@@ -1,9 +1,8 @@
 import techsBg from "@/public/img/background-techs.webp";
 import Loader from "../Loader";
-import { FaMessage } from "react-icons/fa6";
-import { FaCalendar, FaStar, FaCode, FaLink } from "react-icons/fa";
-
+import CardProjeto from "../CardProjeto";
 import { useState, useEffect } from "react";
+
 export default function Projetos() {
   const [projetos, setProjetos] = useState([]); // Estado para armazenar os projetos
   const [loading, setLoading] = useState(true); // Estado para controlar o carregamento (começa como true para mostrar o loader)
@@ -44,33 +43,14 @@ export default function Projetos() {
         className="relative z-10 grid p-2 items-center justify-center m-auto grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3"
       >
         {projetos.map((projeto) => (
-          <div
-            className="flex flex-col justify-between gap-1.5 p-4 rounded-lg shadow-md bg-slate-800 text-white w-full h-full"
+          <CardProjeto
             key={projeto.id}
-          >
-            <h2 className="text-xl font-bold">
-              <FaCode className="inline-block mr-1" />
-              {""}
-              {projeto.nome}
-            </h2>
-            <p>
-              <FaMessage className="inline-block mr-1" /> {projeto.descricao}
-            </p>
-            <p>
-              <FaCalendar className="inline-block mr-1" />
-              Data de criação:{" "}
-              {new Date(projeto.data_criacao).toLocaleDateString("pt-BR")}
-            </p>
-            <p>
-              <FaStar className="inline-block mr-1" />
-              Status: {projeto.status}
-            </p>
-            <a target="_blank" href={projeto.linkDemo} className="underline">
-              {" "}
-              <FaLink className="inline-block mr-1" />
-              Link do Projeto
-            </a>
-          </div>
+            title={projeto.nome}
+            description={projeto.descricao}
+            dateCreated={projeto.data_criacao}
+            linkDemo={projeto.linkDemo}
+            status={projeto.status}
+          />
         ))}
       </div>
     </section>
