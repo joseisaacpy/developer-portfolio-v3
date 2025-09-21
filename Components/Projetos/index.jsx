@@ -1,6 +1,13 @@
+// Imagem de fundo
 import techsBg from "@/public/img/background-techs.webp";
+
+// Loader
 import Loader from "../Loader";
+
+// Card
 import CardProjeto from "../CardProjeto";
+
+// Hooks
 import { useState, useEffect } from "react";
 
 export default function Projetos() {
@@ -9,7 +16,7 @@ export default function Projetos() {
 
   // Função para buscar os projetos da API
   const fetchData = async () => {
-    const url = "api/projetos";
+    const url = "/api/projetos";
     try {
       const response = await fetch(url);
       const data = await response.json();
@@ -25,6 +32,12 @@ export default function Projetos() {
     fetchData(); // Chama a função para buscar os projetos ao montar o componente
   }, []);
 
+  // Se os dados estiverem carregando
+  if (loading) {
+    return <Loader />;
+  }
+
+  // Conteúdo principal
   return (
     <section
       className="relative py-16 bg-gray-100 text-gray-800 bg-cover bg-center"
@@ -36,11 +49,9 @@ export default function Projetos() {
         Projetos
       </h2>
 
-      {/* Loader overlay */}
-      {loading && <Loader />}
       <div
         id="container-projetos"
-        className="relative z-10 grid p-2 items-center justify-center m-auto grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3"
+        className="relative grid p-2 items-center justify-center m-auto grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3"
       >
         {projetos.map((projeto) => (
           <CardProjeto

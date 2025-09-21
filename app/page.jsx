@@ -1,6 +1,10 @@
 "use client";
+// Toast/Notificações
 import { ToastContainer } from "react-toastify";
+
+// Element do scroll
 import { Element } from "react-scroll";
+
 // Components
 import Header from "@/Components/Header";
 import Home from "@/Components/Home";
