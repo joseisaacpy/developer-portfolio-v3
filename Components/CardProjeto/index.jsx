@@ -14,8 +14,8 @@ export default function CardProjeto({
       className="flex flex-col justify-between gap-1.5 p-4 rounded-lg shadow-md bg-slate-800 text-white w-full h-full"
       key={title}
     >
-      <h2 className="text-xl font-bold">
-        <FaCode className="inline-block mr-1" />
+      <h2 className="text-xl font-bold bg-gradient-to-r bg-clip-text from-blue-100 to-blue-500 text-transparent">
+        <FaCode className="text-white inline-block mr-1" />
         {""}
         {title}
       </h2>
@@ -28,14 +28,17 @@ export default function CardProjeto({
       </p>
       <p>
         <FaStar className="inline-block mr-1" />
-        Status: {status ? "Concluído" : "Em andamento"}
+        Status:{" "}
+        <span className={status ? "text-green-400" : "text-yellow-400"}>
+          {status ? "Concluído" : "Em andamento"}
+        </span>
       </p>
-      <div className="flex gap-4">
+      <div className="flex flex-col lg:flex-row gap-2 justify-between mt-1">
         <a
           target="_blank"
           href={linkDemo}
           rel="noopener noreferrer"
-          className="underline"
+          className="flex items-center gap-2 px-2 py-1 bg-blue-600 hover:bg-blue-700 rounded-md transition-colors duration-200"
         >
           <FaLink className="inline-block mr-1" />
           Link do Projeto
@@ -44,7 +47,7 @@ export default function CardProjeto({
           target="_blank"
           href={linkRepo}
           rel="noopener noreferrer"
-          className="underline"
+          className="flex items-center gap-2 px-2 py-1 bg-blue-600 hover:bg-blue-700 rounded-md transition-colors duration-200"
         >
           <FaLink className="inline-block mr-1" />
           Link do Repositório
