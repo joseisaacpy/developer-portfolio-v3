@@ -6,6 +6,7 @@ import logoImg from "@/public/img/dev-jose.webp";
 
 import { FaHome, FaUser, FaBriefcase, FaPhone, FaCode } from "react-icons/fa";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
+
 import { useState } from "react";
 import { Link } from "react-scroll";
 import { useEffect } from "react";
@@ -15,6 +16,16 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  // Armazenar links, destinos e icons
+  const links = [
+    { label: "Início", to: "home", icon: <FaHome /> },
+    { label: "Sobre", to: "sobre", icon: <FaUser /> },
+    { label: "Tecnologias", to: "tecnologias", icon: <FaCode /> },
+    { label: "Projetos", to: "projetos", icon: <FaBriefcase /> },
+    { label: "Contato", to: "contato", icon: <FaPhone /> },
+  ];
+
+  // useEffect
   useEffect(() => {
     const onScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -55,64 +66,26 @@ export default function Header() {
           {/* Menu burguer */}
           <IoMdMenu
             className="md:hidden cursor-pointer text-3xl font-bold"
+            aria-label="Abrir menu"
             onClick={() => setIsOpen(!isOpen)}
           />
           {/* Ul */}
           <ul className="hidden md:flex items-center gap-4">
-            <li>
-              <Link
-                to="home"
-                smooth={true}
-                duration={500}
-                className="cursor-pointer transition-all hover:underline"
-              >
-                Início
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="sobre"
-                smooth={true}
-                duration={500}
-                offset={-64}
-                className="cursor-pointer transition-all hover:underline"
-              >
-                Sobre
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="tecnologias"
-                smooth={true}
-                duration={500}
-                offset={-64}
-                className="cursor-pointer transition-all hover:underline"
-              >
-                Tecnologias
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="projetos"
-                smooth={true}
-                duration={500}
-                offset={-64}
-                className="cursor-pointer transition-all hover:underline"
-              >
-                Projetos
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="contato"
-                smooth={true}
-                duration={500}
-                offset={-64}
-                className="cursor-pointer transition-all hover:underline"
-              >
-                Contato
-              </Link>
-            </li>
+            {links.map((link) => {
+              return (
+                <li key={link.to}>
+                  <Link
+                    className="cursor-pointer transition-all hover:underline"
+                    to={link.to}
+                    smooth={true}
+                    duration={500}
+                    offset={-64}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
       </header>
@@ -122,76 +95,30 @@ export default function Header() {
         <div className="md:hidden w-full h-screen fixed top-0 left-0 bg-slate-950 text-white z-50 transition-all duration-300">
           <button
             className="absolute top-4 right-4 text-3xl cursor-pointer"
+            aria-label="Fechar menu"
             onClick={() => setIsOpen(false)}
           >
             <IoMdClose />
           </button>
           <ul className="h-full flex flex-col items-center justify-center gap-6">
-            <li>
-              <Link
-                to="home"
-                smooth={true}
-                duration={500}
-                onClick={() => {
-                  setIsOpen(false);
-                }}
-                className="text-2xl flex items-center justify-center gap-2 hover:scale-105 transition-transform"
-              >
-                <FaHome /> Início
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="sobre"
-                smooth={true}
-                duration={500}
-                onClick={() => {
-                  setIsOpen(false);
-                }}
-                className="text-2xl flex items-center justify-center gap-2 hover:scale-105 transition-transform"
-              >
-                <FaUser /> Sobre
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="tecnologias"
-                smooth={true}
-                duration={500}
-                onClick={() => {
-                  setIsOpen(false);
-                }}
-                className="text-2xl flex items-center justify-center gap-2 hover:scale-105 transition-transform"
-              >
-                <FaCode /> Tecnologias
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="projetos"
-                smooth={true}
-                duration={500}
-                onClick={() => {
-                  setIsOpen(false);
-                }}
-                className="text-2xl flex items-center justify-center gap-2 hover:scale-105 transition-transform"
-              >
-                <FaBriefcase /> Projetos
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="contato"
-                smooth={true}
-                duration={500}
-                onClick={() => {
-                  setIsOpen(false);
-                }}
-                className="text-2xl flex items-center justify-center gap-2 hover:scale-105 transition-transform"
-              >
-                <FaPhone /> Contato
-              </Link>
-            </li>
+            {links.map((link) => {
+              return (
+                <li key={link.to}>
+                  <Link
+                    to={link.to}
+                    smooth={true}
+                    duration={500}
+                    onClick={() => {
+                      setIsOpen(false);
+                    }}
+                    className="text-2xl flex items-center justify-center gap-2 hover:scale-105 transition-transform"
+                  >
+                    {link.icon}
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
       )}
