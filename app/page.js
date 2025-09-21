@@ -1,6 +1,5 @@
 "use client";
 import { ToastContainer } from "react-toastify";
-
 // Components
 import Header from "@/Components/Header";
 import Home from "@/Components/Home";
