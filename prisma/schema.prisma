@@ -12,7 +12,8 @@ model Projeto {
   nome         String
   descricao    String
   data_criacao DateTime @default(now())
-  link         String
+  linkDemo     String
+  linkRepo     String
   status       Boolean
 
   @@map("projetos")

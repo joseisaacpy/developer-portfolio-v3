@@ -10,9 +10,9 @@ export default function Projetos() {
 
   // Função para buscar os projetos da API
   const fetchData = async () => {
-    const url = import.meta.env.VITE_API_URL;
+    const url = "api/projetos";
     try {
-      const response = await fetch(`${url}/api/projetos`);
+      const response = await fetch(url);
       const data = await response.json();
       setProjetos(data);
     } catch (error) {
@@ -29,7 +29,7 @@ export default function Projetos() {
   return (
     <section
       className="relative py-16 bg-gray-100 text-gray-800 bg-cover bg-center"
-      style={{ backgroundImage: `url(${techsBg})` }}
+      style={{ backgroundImage: `url(${techsBg.src})` }}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
@@ -65,7 +65,7 @@ export default function Projetos() {
               <FaStar className="inline-block mr-1" />
               Status: {projeto.status}
             </p>
-            <a target="_blank" href={projeto.link} className="underline">
+            <a target="_blank" href={projeto.linkDemo} className="underline">
               {" "}
               <FaLink className="inline-block mr-1" />
               Link do Projeto
