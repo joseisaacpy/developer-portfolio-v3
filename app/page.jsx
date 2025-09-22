@@ -6,13 +6,13 @@ import { ToastContainer } from "react-toastify";
 import { Element } from "react-scroll";
 
 // Components
-import Header from "@/Components/Header";
-import Home from "@/Components/Home";
-import Sobre from "@/Components/Sobre";
-import Tecnologias from "@/Components/Tecnologias";
-import Projetos from "@/Components/Projetos";
-import Contato from "@/Components/Contato";
-import Footer from "@/Components/Footer";
+import Header from "@/Components/Header/page";
+import Home from "@/Components/Home/page";
+import Sobre from "@/Components/Sobre/page";
+import Tecnologias from "@/Components/Tecnologias/page";
+import Projetos from "@/Components/Projetos/page";
+import Contato from "@/Components/Contato/page";
+import Footer from "@/Components/Footer/page";
 
 export default function SinglePage() {
   return (

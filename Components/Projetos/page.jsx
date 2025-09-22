@@ -2,10 +2,10 @@
 import techsBg from "@/public/img/background-techs.webp";
 
 // Loader
-import Loader from "../Loader";
+import Loader from "../Loader/page";
 
 // Card
-import CardProjeto from "../CardProjeto";
+import CardProjeto from "../CardProjeto/page";
 
 // Hooks
 import { useState, useEffect } from "react";
