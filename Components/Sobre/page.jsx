@@ -1,7 +1,35 @@
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { FaCoffee, FaLaptop } from "react-icons/fa";
 
+// Currículo para download
+const curriculoPdf = "Jose-Isaac-Estagio-TI.pdf";
+
+import { toast } from "react-toastify";
+
 export default function Sobre() {
+  // Função para baixar currículo
+  // Função para baixar currículo
+  function handleDownload() {
+    try {
+      // Checa se o caminho existe
+      if (!curriculoPdf) {
+        throw new Error("Arquivo não encontrado");
+      }
+
+      const link = document.createElement("a");
+      link.href = curriculoPdf;
+      link.download = "Jose-Isaac-Estagio-TI.pdf";
+
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      toast.success("Currículo baixado com sucesso, agora vamos conversar!");
+    } catch (err) {
+      console.error(err);
+      toast.error("Ops! Não foi possível baixar o currículo.");
+    }
+  }
   return (
     <div className="py-16 bg-white text-gray-900 mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
       <div className="w-full md:w-1/3 flex justify-center">
@@ -34,16 +62,10 @@ export default function Sobre() {
           de novos desafios.
         </p>
         <a
-          href="google.com"
-          onClick={() =>
-            toast.success(
-              "Currículo baixado com sucesso, agora vamos conversar!"
-            )
-          }
-          download
+          onClick={handleDownload}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block mt-6 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded shadow transition duration-300"
+          className="inline-block mt-6 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded shadow transition duration-300 cursor-pointer"
         >
           Baixar Currículo
         </a>
