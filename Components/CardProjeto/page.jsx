@@ -38,19 +38,27 @@ export default function CardProjeto({
           target="_blank"
           href={linkDemo}
           rel="noopener noreferrer"
-          className="flex items-center gap-2 px-2 py-1 bg-blue-600 hover:bg-blue-700 rounded-md transition-colors duration-200"
+          className={`flex items-center gap-2 px-2 py-1 rounded-md transition-colors duration-200 ${
+            linkDemo
+              ? "bg-blue-600 hover:bg-blue-700"
+              : "bg-gray-500 cursor-not-allowed"
+          }`}
         >
           <FaLink className="inline-block mr-1" />
-          Link do Projeto
+          {!linkDemo ? "Sem link" : "Link do Projeto"}
         </a>
         <a
           target="_blank"
           href={linkRepo}
           rel="noopener noreferrer"
-          className="flex items-center gap-2 px-2 py-1 bg-blue-600 hover:bg-blue-700 rounded-md transition-colors duration-200"
+          className={`flex items-center gap-2 px-2 py-1 rounded-md transition-colors duration-200 ${
+            linkRepo
+              ? "bg-blue-600 hover:bg-blue-700"
+              : "bg-gray-500 cursor-not-allowed"
+          }`}
         >
           <FaLink className="inline-block mr-1" />
-          Link do Repositório
+          {!linkRepo ? "Sem link" : "Link do Repositório"}
         </a>
       </div>
     </div>
