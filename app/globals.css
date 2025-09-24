@@ -1,10 +1,38 @@
+/* Importa a fonte */
 @font-face {
   font-family: "Poppins";
   src: url("./../public/fonts/Poppins-Regular.ttf");
 }
 
+/* Importa o tailwind */
 @import "tailwindcss";
 
+/* Variáveis */
+theme {
+  --color-blue-default: rgb(43, 127, 255);
+}
+
+:root {
+  --color-blue-default: rgb(43, 127, 255);
+}
+
+/* Fonte padrão no body */
 body {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+/* Largura da barra de rolagem */
+::-webkit-scrollbar {
+  width: 12px; /* largura */
+}
+
+/* Cor do trilho (fundo da barra) */
+::-webkit-scrollbar-track {
+  background: #fff; /* cor de fundo */
+}
+
+/* Cor do "thumb" (parte que desliza) */
+::-webkit-scrollbar-thumb {
+  background: var(--color-blue-default); /* cor da alça */
+  border-radius: 10px; /* bordas arredondadas */
 }
