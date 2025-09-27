@@ -16,7 +16,7 @@ export const experiencias = [
   {
     empresa: "R Damásio",
     cargo: "Aprendiz - Logística",
-    periodo: "04/2024 – 04/2025",
+    periodo: "04/2023 – 04/2024",
     descricao: "Suporte a processos logísticos e atividades administrativas.",
   },
 ];
