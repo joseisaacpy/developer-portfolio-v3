@@ -4,7 +4,15 @@
 import Image from "next/image";
 import logoImg from "@/public/img/dev-jose.webp";
 
-import { FaHome, FaUser, FaBriefcase, FaPhone, FaCode } from "react-icons/fa";
+import {
+  FaHome,
+  FaUser,
+  FaLaptopCode,
+  FaBriefcase,
+  FaPhone,
+  FaCode,
+} from "react-icons/fa";
+
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 
 import { useState } from "react";
@@ -21,7 +29,8 @@ export default function Header() {
     { label: "Início", to: "home", icon: <FaHome /> },
     { label: "Sobre", to: "sobre", icon: <FaUser /> },
     { label: "Tecnologias", to: "tecnologias", icon: <FaCode /> },
-    { label: "Projetos", to: "projetos", icon: <FaBriefcase /> },
+    { label: "Projetos", to: "projetos", icon: <FaLaptopCode /> },
+    { label: "Experiências", to: "experiencias", icon: <FaBriefcase /> },
     { label: "Contato", to: "contato", icon: <FaPhone /> },
   ];
 
