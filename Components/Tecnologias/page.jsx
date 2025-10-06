@@ -21,21 +21,21 @@ export default function Tecnologias() {
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
                 width={40}
                 height={40}
-                alt="Logo do HTML5"
+                alt="Ícone da tecnologia HTML5"
                 className="h-8 md:h-10"
               />
               <Image
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
                 width={40}
                 height={40}
-                alt="Logo do CSS3"
+                alt="Ícone da tecnologia CSS3"
                 className="h-8 md:h-10"
               />
               <Image
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
                 width={40}
                 height={40}
-                alt="Logo do Tailwind CSS"
+                alt="Ícone da tecnologia Tailwind CSS"
                 className="h-8 md:h-10"
               />
             </div>
@@ -49,10 +49,30 @@ export default function Tecnologias() {
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
               width={40}
               height={40}
-              alt="Logo do JavaScript"
+              alt="Ícone da linguagem JavaScript"
               className="h-16"
             />
             <p className="mt-2 text-sm font-medium">JavaScript</p>
+          </div>
+          <div className="flex flex-col items-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300">
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+              width={40}
+              height={40}
+              alt="Ícone da biblioteca React"
+              className="h-16"
+            />
+            <p className="mt-2 text-sm font-medium">React</p>
+          </div>
+          <div className="flex flex-col items-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300">
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+              width={40}
+              height={40}
+              alt="Ícone do framework Next.js"
+              className="h-16"
+            />
+            <p className="mt-2 text-sm font-medium">Next.js</p>
           </div>
 
           <div className="flex flex-col items-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300">
@@ -60,7 +80,7 @@ export default function Tecnologias() {
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg"
               width={40}
               height={40}
-              alt="Logo do Node.js"
+              alt="Ícone da tecnologia Node.js"
               className="h-16"
             />
             <p className="mt-2 text-sm font-medium">Node.js</p>
@@ -71,7 +91,7 @@ export default function Tecnologias() {
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
               width={40}
               height={40}
-              alt="Logo do Express.js"
+              alt="Ícone do framework Express.js"
               className="h-16"
             />
 
@@ -80,10 +100,20 @@ export default function Tecnologias() {
 
           <div className="flex flex-col items-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300">
             <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg"
+              width={40}
+              height={40}
+              alt="Ícone do Prisma ORM"
+              className="h-16"
+            />
+            <p className="mt-2 text-sm font-medium">Prisma ORM</p>
+          </div>
+          <div className="flex flex-col items-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300">
+            <Image
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
               width={40}
               height={40}
-              alt="Logo do MySQL"
+              alt="Ícone do banco MySQL"
               className="h-16"
             />
             <p className="mt-2 text-sm font-medium">MySQL</p>
@@ -91,20 +121,10 @@ export default function Tecnologias() {
 
           <div className="flex flex-col items-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300">
             <Image
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg"
-              width={40}
-              height={40}
-              alt="Logo do SQLite"
-              className="h-16"
-            />
-            <p className="mt-2 text-sm font-medium">SQLite</p>
-          </div>
-          <div className="flex flex-col items-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300">
-            <Image
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
               width={40}
               height={40}
-              alt="Logo do MongoDB"
+              alt="Ícone do banco MongoDB"
               className="h-16"
             />
             <p className="mt-2 text-sm font-medium">MongoDB</p>
