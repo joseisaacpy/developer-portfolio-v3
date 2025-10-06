@@ -8,7 +8,6 @@ import { toast } from "react-toastify";
 
 export default function Sobre() {
   // Função para baixar currículo
-  // Função para baixar currículo
   function handleDownload() {
     try {
       // Checa se o caminho existe
@@ -42,7 +41,7 @@ export default function Sobre() {
 
       <div className="w-full md:w-2/3 text-center md:text-left">
         <h2 className="text-3xl font-bold mb-4 text-blue-600">
-          Sobre Mim
+          Sobre mim
           <FaCoffee className="inline-block ml-2" />
           <FaLaptop className="inline-block ml-2" />
         </h2>
