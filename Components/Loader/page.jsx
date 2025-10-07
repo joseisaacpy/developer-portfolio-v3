@@ -6,7 +6,7 @@ import logoImg from "@/public/img/dev-jose.webp";
 
 export default function Loader() {
   return (
-    <div className="min-h-full min-w-full z-50 inset-0 fixed bg-gradient-to-br from-black to-blue-500 flex flex-col gap-2 items-center justify-center transition-all duration-300">
+    <div className="min-h-full min-w-full z-50 inset-0 fixed bg-gradient-to-br from-black to-blue-500 flex flex-col gap-2 items-center justify-center transition-all duration-600">
       {/* Logo */}
       <Image
         className="h-20 w-20 animate-spin rounded-full border-2 border-white"
