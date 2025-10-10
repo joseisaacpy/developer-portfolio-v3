@@ -15,7 +15,7 @@ async function getProjeto(id) {
 }
 
 // Importa o Card
-import CardProjeto from "@/Components/CardProjeto/page";
+import CardProjeto from "@/components/CardProjeto";
 
 export default async function ProjetoPage({ params }) {
   // Pega o projeto com a função
@@ -30,10 +30,7 @@ export default async function ProjetoPage({ params }) {
         {/* Parágrafo com o id pesquisado */}
         <p>ID buscado: {params.id}</p>
         {/* Âncora de voltar pra página inicial */}
-        <a
-          href="/"
-          className="px-6 py-2 bg-slate-200 text-black rounded-md"
-        >
+        <a href="/" className="px-6 py-2 bg-slate-200 text-black rounded-md">
           Voltar
         </a>
       </section>

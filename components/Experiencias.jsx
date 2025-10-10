@@ -1,5 +1,5 @@
 // Importa a variável de experiências
-import { experiencias } from "./experiencias";
+import { experiencias } from "@/data/experiencias";
 
 export default function Experiencias() {
   return (
