@@ -1,7 +1,12 @@
+// Link
+import Link from "next/link";
+
+// Icons
 import { FaMessage } from "react-icons/fa6";
 import { FaCalendar, FaStar, FaCode, FaLink } from "react-icons/fa";
 
 export default function CardProjeto({
+  id,
   title,
   description,
   dateCreated,
@@ -33,7 +38,8 @@ export default function CardProjeto({
           {status ? "Concluído" : "Em andamento"}
         </span>
       </p>
-      <div className="flex flex-col lg:flex-row gap-2 justify-between mt-1">
+      <div className="flex flex-col gap-2 justify-between mt-1">
+        {/* link de demonstração */}
         <a
           target="_blank"
           href={linkDemo}
@@ -47,6 +53,7 @@ export default function CardProjeto({
           <FaLink className="inline-block mr-1" />
           {!linkDemo ? "Sem link" : "Link do Projeto"}
         </a>
+        {/* link do repositório */}
         <a
           target="_blank"
           href={linkRepo}
@@ -60,6 +67,15 @@ export default function CardProjeto({
           <FaLink className="inline-block mr-1" />
           {!linkRepo ? "Sem link" : "Link do Repositório"}
         </a>
+        {/* link de detalhes */}
+        <Link
+          href={`/projetos/${id}`}
+          rel="noopener noreferrer"
+          className={`flex items-center gap-2 px-2 py-1 bg-blue-600 hover:bg-blue-700 rounded-md transition-colors duration-200`}
+        >
+          <FaLink className="inline-block mr-1" />
+          Detalhes
+        </Link>
       </div>
     </div>
   );
