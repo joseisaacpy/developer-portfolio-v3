@@ -32,7 +32,7 @@ export default async function ProjetoPage({ params }) {
         {/* Âncora de voltar pra página inicial */}
         <a
           href="/"
-          className="underline px-6 py-2 bg-slate-200 text-black rounded-md"
+          className="px-6 py-2 bg-slate-200 text-black rounded-md"
         >
           Voltar
         </a>
@@ -42,15 +42,23 @@ export default async function ProjetoPage({ params }) {
 
   //   Caso ache o projeto
   return (
-    <section className="flex items-center justify-center min-h-screen w-full bg-slate-800">
+    <section className="flex flex-col items-center justify-center min-h-screen w-full bg-slate-800">
       <CardProjeto
         key={projeto.id}
         title={projeto.nome}
         description={projeto.descricao}
         dateCreated={projeto.data_criacao}
         linkDemo={projeto.linkDemo}
+        linkRepo={projeto.linkRepo}
         status={projeto.status}
       />
+      {/* Botão de voltar */}
+      <a
+        href="/#projetos"
+        className="px-6 py-2 bg-slate-200 text-black rounded-md"
+      >
+        Voltar
+      </a>
     </section>
   );
 }
