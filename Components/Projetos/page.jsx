@@ -40,6 +40,7 @@ export default function Projetos() {
   // Conteúdo principal
   return (
     <section
+      id="projetos"
       className="relative py-16 bg-gray-100 text-gray-800 bg-cover bg-center"
       style={{ backgroundImage: `url(${techsBg.src})` }}
     >
@@ -62,6 +63,7 @@ export default function Projetos() {
             linkDemo={projeto.linkDemo}
             linkRepo={projeto.linkRepo}
             status={projeto.status}
+            id={projeto.id}
           />
         ))}
       </div>
