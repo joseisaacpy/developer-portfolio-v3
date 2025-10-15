@@ -68,14 +68,14 @@ export default function CardProjeto({
           {!linkRepo ? "Sem link" : "Link do Repositório"}
         </a>
         {/* link de detalhes */}
-        <Link
+        {/* <Link
           href={`/projetos/${id}`}
           rel="noopener noreferrer"
           className={`flex items-center gap-2 px-2 py-1 bg-blue-600 hover:bg-blue-700 rounded-md transition-colors duration-200`}
         >
           <FaLink className="inline-block mr-1" />
           Detalhes
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
