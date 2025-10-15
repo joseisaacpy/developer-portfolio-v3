@@ -14,6 +14,7 @@ import Experiencias from "@/components/Experiencias";
 import Projetos from "@/components/Projetos";
 import Contato from "@/components/Contato";
 import Footer from "@/components/Footer";
+import { ButtomPlayerSound } from "@/components/ButtomPlayerSound";
 
 export default function SinglePage() {
   return (
@@ -44,9 +45,14 @@ export default function SinglePage() {
         <Contato />
       </Element>
 
+      {/* Footer */}
       <Footer />
 
+      {/* Toast / Notificação */}
       <ToastContainer autoClose={700} />
+
+      {/* Botão para música */}
+      <ButtomPlayerSound />
     </>
   );
 }
