@@ -1,9 +1,16 @@
 "use client";
+
+// Lenis Scroll
+import Lenis from "@studio-freight/lenis";
+
 // Toast/Notificações
 import { ToastContainer } from "react-toastify";
 
 // Element do scroll
 import { Element } from "react-scroll";
+
+// Hooks
+import { useEffect } from "react";
 
 // Components
 import Header from "@/components/Header";
@@ -17,6 +24,24 @@ import Footer from "@/components/Footer";
 import { ButtomPlayerSound } from "@/components/ButtomPlayerSound";
 
 export default function SinglePage() {
+  // Efeito para o scroll com lenis
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 2, // duração da animação em segundos
+      smoothWheel: true, // Habilita a animação de rolagem suave
+    });
+
+    function ref(time) {
+      lenis.raf(time);
+      requestAnimationFrame(ref);
+    }
+
+    requestAnimationFrame(ref);
+
+    return () => {
+      lenis.destroy(); // Limpa o Lenis ao desmontar o componente
+    };
+  }, []);
   return (
     <>
       <Header />
