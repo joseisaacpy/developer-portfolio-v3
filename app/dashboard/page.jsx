@@ -10,7 +10,7 @@ import Loader from "@/components/Loader";
 import Link from "next/link";
 
 // Importa hooks
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 
 export default function Dashboard() {
   // Estado para armazenar os projetos
