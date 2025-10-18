@@ -13,6 +13,7 @@ export default function CardProjeto({
   status,
   linkDemo,
   linkRepo,
+  isAdmin,
 }) {
   return (
     <div
@@ -38,7 +39,7 @@ export default function CardProjeto({
           {status ? "Concluído" : "Em andamento"}
         </span>
       </p>
-      <div className="flex flex-col gap-2 justify-between mt-1">
+      <div className="flex flex-col gap-2 justify-between">
         {/* link de demonstração */}
         <a
           target="_blank"
@@ -67,15 +68,23 @@ export default function CardProjeto({
           <FaLink className="inline-block mr-1" />
           {!linkRepo ? "Sem link" : "Link do Repositório"}
         </a>
-        {/* link de detalhes */}
-        {/* <Link
-          href={`/projetos/${id}`}
-          rel="noopener noreferrer"
-          className={`flex items-center gap-2 px-2 py-1 bg-blue-600 hover:bg-blue-700 rounded-md transition-colors duration-200`}
+      </div>
+      {/* Div de admin */}
+      <div className={`${isAdmin ? "flex" : "hidden"} gap-2 flex-col`}>
+        {/* botão de editar */}
+        <Link
+          href={`/editar/${id}`}
+          className="flex items-center gap-2 px-2 py-1 rounded-md transition-colors duration-200 bg-blue-600 hover:bg-blue-700"
         >
-          <FaLink className="inline-block mr-1" />
-          Detalhes
-        </Link> */}
+          Editar
+        </Link>
+        {/* botão de excluir */}
+        <Link
+          href={`/excluir/${id}`}
+          className="flex items-center gap-2 px-2 py-1 rounded-md transition-colors duration-200 bg-red-600 hover:bg-red-700"
+        >
+          Excluir
+        </Link>
       </div>
     </div>
   );
