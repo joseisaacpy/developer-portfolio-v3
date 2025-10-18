@@ -73,11 +73,11 @@ export default function SinglePage() {
       {/* Footer */}
       <Footer />
 
-      {/* Toast / Notificação */}
-      <ToastContainer autoClose={700} />
-
       {/* Botão para música */}
       <ButtomPlayerSound />
+
+      {/* Toast / Notificação */}
+      <ToastContainer autoClose={700} />
     </>
   );
 }
