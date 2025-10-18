@@ -60,26 +60,33 @@ export default function Dashboard() {
 
   //   Se tiver projetos
   return (
-    // Section
-    <section className="p-2">
-      {/* Título */}
-      <h1 className="text-lg md:text-2xl font-bold">Dashboard de projetos</h1>
-      {/* Grid de cards */}
-      <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-2">
-        {projetos.map((projeto) => (
-          <CardProjeto
-            key={projeto.id}
-            isAdmin={true}
-            title={projeto.nome}
-            description={projeto.descricao}
-            dateCreated={projeto.data_criacao}
-            linkDemo={projeto.linkDemo}
-            linkRepo={projeto.linkRepo}
-            status={projeto.status}
-            id={projeto.id}
-          />
-        ))}
-      </div>
-    </section>
+    <>
+      {/* Header */}
+      <header className="p-2">
+        {/* Título com a quantidade de projetos */}
+        <h1 className="text-xl md:text-2xl font-bold text-center">
+          Painel de projetos - ({projetos.length})
+        </h1>
+      </header>
+      {/* Section */}
+      <section className="p-2">
+        {/* Grid de cards */}
+        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-2">
+          {projetos.map((projeto) => (
+            <CardProjeto
+              key={projeto.id}
+              isAdmin={true}
+              id={projeto.id}
+              title={projeto.nome}
+              description={projeto.descricao}
+              dateCreated={projeto.data_criacao}
+              linkDemo={projeto.linkDemo}
+              linkRepo={projeto.linkRepo}
+              status={projeto.status}
+            />
+          ))}
+        </div>
+      </section>
+    </>
   );
 }
