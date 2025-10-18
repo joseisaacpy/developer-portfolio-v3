@@ -25,25 +25,12 @@ export async function POST(req) {
     const novoProjeto = await prisma.projeto.create({
       data: body,
     });
-    return Response.json(novoProjeto);
+    return Response.json({
+      message: "Projeto criado com sucesso",
+      projeto: novoProjeto,
+    });
   } catch (error) {
     console.error(error);
     return new Response("Erro ao criar projeto", { status: 500 });
-  }
-}
-
-// DELETE (deleta um projeto)
-export async function DELETE(req) {
-  try {
-    const body = await req.json();
-    await prisma.projeto.delete({
-      where: {
-        id: body.id,
-      },
-    });
-    return new Response("Projeto deletado com sucesso", { status: 200 });
-  } catch (error) {
-    console.error(error);
-    return new Response("Erro ao deletar projeto", { status: 500 });
   }
 }
