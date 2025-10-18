@@ -1,5 +1,4 @@
-// Link
-import Link from "next/link";
+"use client";
 
 // Icons
 import { FaMessage } from "react-icons/fa6";
@@ -15,6 +14,49 @@ export default function CardProjeto({
   linkRepo,
   isAdmin,
 }) {
+  // Função para deletar um projeto
+  const handleDelete = async () => {
+    try {
+      const response = await fetch(`/api/projetos/${id}`, {
+        method: "DELETE",
+      });
+
+      if (response.ok) {
+        alert("Projeto deletado com sucesso");
+        window.location.reload();
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Erro ao deletar projeto");
+    }
+  };
+  // Função para editar um projeto
+  const handleEdit = async () => {
+    try {
+      const response = await fetch(`/api/projetos/${id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          nome,
+          descricao,
+          data_criacao,
+          linkDemo,
+          linkRepo,
+          status,
+        }),
+      });
+      if (response.ok) {
+        alert("Projeto editado com sucesso");
+        window.location.reload();
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Erro ao editar projeto");
+    }
+  };
+
   return (
     <div
       className="flex flex-col justify-between gap-1.5 p-4 rounded-lg shadow-md bg-slate-800 text-white w-full h-full"
@@ -72,19 +114,19 @@ export default function CardProjeto({
       {/* Div de admin */}
       <div className={`${isAdmin ? "flex" : "hidden"} gap-2 flex-col`}>
         {/* botão de editar */}
-        <Link
-          href={`/editar/${id}`}
-          className="flex items-center gap-2 px-2 py-1 rounded-md transition-colors duration-200 bg-blue-600 hover:bg-blue-700"
+        <button
+          onClick={handleEdit}
+          className="flex items-center gap-2 px-2 py-1 rounded-md transition-colors duration-200 cursor-pointer bg-blue-600 hover:bg-blue-700"
         >
           Editar
-        </Link>
+        </button>
         {/* botão de excluir */}
-        <Link
-          href={`/excluir/${id}`}
-          className="flex items-center gap-2 px-2 py-1 rounded-md transition-colors duration-200 bg-red-600 hover:bg-red-700"
+        <button
+          onClick={handleDelete}
+          className="flex items-center gap-2 px-2 py-1 rounded-md transition-colors duration-200 cursor-pointer bg-red-600 hover:bg-red-700"
         >
           Excluir
-        </Link>
+        </button>
       </div>
     </div>
   );
