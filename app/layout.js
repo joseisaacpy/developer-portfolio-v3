@@ -73,7 +73,7 @@ export default function RootLayout({ children }) {
         data-website-id="af70d7f0-3ac6-4874-bd78-5c708d3884d5"
       ></Script>
       {/* Body */}
-      <body className={` ${poppins.className} antialiased`}>
+      <body className={`${poppins.className} antialiased`}>
         {children}
         {/* Toast / Notificação */}
         <ToastContainer autoClose={700} />
