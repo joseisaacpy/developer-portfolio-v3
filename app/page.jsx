@@ -3,9 +3,6 @@
 // Lenis Scroll
 import Lenis from "@studio-freight/lenis";
 
-// Toast/Notificações
-import { ToastContainer } from "react-toastify";
-
 // Element do scroll
 import { Element } from "react-scroll";
 
@@ -75,9 +72,6 @@ export default function SinglePage() {
 
       {/* Botão para música */}
       <ButtomPlayerSound />
-
-      {/* Toast / Notificação */}
-      <ToastContainer autoClose={700} />
     </>
   );
 }
