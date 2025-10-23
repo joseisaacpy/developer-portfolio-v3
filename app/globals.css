@@ -18,6 +18,7 @@ theme {
 
 /* Fonte padrão no body */
 body {
+  overflow-x: hidden;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
