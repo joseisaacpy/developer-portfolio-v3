@@ -15,7 +15,10 @@ export default function Tecnologias() {
           id="container-tecnologias"
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 justify-center"
         >
-          <div className="flex flex-col items-center justify-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300">
+          <div
+            data-aos="fade-up-right"
+            className="flex flex-col items-center justify-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+          >
             <div className="flex space-x-3 mb-2">
               <Image
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
@@ -44,7 +47,10 @@ export default function Tecnologias() {
             </p>
           </div>
 
-          <div className="flex flex-col items-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300">
+          <div
+            data-aos="fade-up-right"
+            className="flex flex-col items-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+          >
             <Image
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
               width={40}
@@ -54,7 +60,10 @@ export default function Tecnologias() {
             />
             <p className="mt-2 text-sm font-medium">JavaScript</p>
           </div>
-          <div className="flex flex-col items-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300">
+          <div
+            data-aos="fade-up-right"
+            className="flex flex-col items-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+          >
             <Image
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
               width={40}
@@ -64,7 +73,10 @@ export default function Tecnologias() {
             />
             <p className="mt-2 text-sm font-medium">React</p>
           </div>
-          <div className="flex flex-col items-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300">
+          <div
+            data-aos="fade-up-right"
+            className="flex flex-col items-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+          >
             <Image
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
               width={40}
@@ -75,7 +87,10 @@ export default function Tecnologias() {
             <p className="mt-2 text-sm font-medium">Next.js</p>
           </div>
 
-          <div className="flex flex-col items-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300">
+          <div
+            data-aos="fade-up-right"
+            className="flex flex-col items-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+          >
             <Image
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg"
               width={40}
@@ -86,7 +101,10 @@ export default function Tecnologias() {
             <p className="mt-2 text-sm font-medium">Node.js</p>
           </div>
 
-          <div className="flex flex-col items-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300">
+          <div
+            data-aos="fade-up-left"
+            className="flex flex-col items-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+          >
             <Image
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
               width={40}
@@ -98,7 +116,10 @@ export default function Tecnologias() {
             <p className="mt-2 text-sm font-medium">Express.js</p>
           </div>
 
-          <div className="flex flex-col items-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300">
+          <div
+            data-aos="fade-up-left"
+            className="flex flex-col items-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+          >
             <Image
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg"
               width={40}
@@ -108,7 +129,10 @@ export default function Tecnologias() {
             />
             <p className="mt-2 text-sm font-medium">Prisma ORM</p>
           </div>
-          <div className="flex flex-col items-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300">
+          <div
+            data-aos="fade-up-left"
+            className="flex flex-col items-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+          >
             <Image
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
               width={40}
@@ -119,7 +143,10 @@ export default function Tecnologias() {
             <p className="mt-2 text-sm font-medium">MySQL</p>
           </div>
 
-          <div className="flex flex-col items-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300">
+          <div
+            data-aos="fade-up-left"
+            className="flex flex-col items-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+          >
             <Image
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
               width={40}
@@ -129,7 +156,10 @@ export default function Tecnologias() {
             />
             <p className="mt-2 text-sm font-medium">MongoDB</p>
           </div>
-          <div className="flex flex-col items-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300">
+          <div
+            data-aos="fade-up-left"
+            className="flex flex-col items-center bg-white border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+          >
             <div className="flex space-x-3 mb-2">
               <Image
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"

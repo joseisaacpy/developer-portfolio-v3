@@ -6,6 +6,10 @@ import Lenis from "@studio-freight/lenis";
 // Element do scroll
 import { Element } from "react-scroll";
 
+// Aos para animação de scroll
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 // Hooks
 import { useEffect } from "react";
 
@@ -23,6 +27,13 @@ import { ButtomPlayerSound } from "@/components/ButtomPlayerSound";
 export default function SinglePage() {
   // Efeito para o scroll com lenis
   useEffect(() => {
+    // Configura o Aos
+    Aos.init({
+      duration: 700,
+      once: true,
+    });
+
+    // Configura o Lenis
     const lenis = new Lenis({
       duration: 2, // duração da animação em segundos
       smoothWheel: true, // Habilita a animação de rolagem suave
