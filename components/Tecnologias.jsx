@@ -73,11 +73,13 @@ export default function Tecnologias() {
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 justify-center"
         >
           {/* Renderiza as tecnologias */}
-          {tecnologias.map((tecnologia) => {
+          {tecnologias.map((tecnologia, index) => {
             return (
               <div
                 key={tecnologia.nome}
                 data-aos="fade-up"
+                data-aos-delay={index * 100} // atraso progressivo
+                data-aos-duration="600"
                 className="flex flex-col items-center bg-white border border-blue-600 shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
               >
                 <Image
