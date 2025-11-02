@@ -4,15 +4,6 @@
 import Image from "next/image";
 import logoImg from "@/public/img/dev-jose.webp";
 
-// Importa icons
-import {
-  FaHome,
-  FaUser,
-  FaLaptopCode,
-  FaBriefcase,
-  FaPhone,
-  FaCode,
-} from "react-icons/fa";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 
 // Importa hooks
@@ -21,6 +12,9 @@ import { useState, useEffect } from "react";
 // Importa Link
 import { Link } from "react-scroll";
 
+// Importa os links
+import itensNav from "@/data/itensNav";
+
 export default function Header() {
   // Estado pra controlar o menu
   const [isOpen, setIsOpen] = useState(false);
@@ -28,18 +22,7 @@ export default function Header() {
   // Estado pra controlar o scroll
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Armazenar links, destinos e icons
-  const links = [
-    { label: "Início", to: "home", icon: <FaHome /> },
-    { label: "Sobre", to: "sobre", icon: <FaUser /> },
-    { label: "Tecnologias", to: "tecnologias", icon: <FaCode /> },
-    { label: "Projetos", to: "projetos", icon: <FaLaptopCode /> },
-    { label: "Experiências", to: "experiencias", icon: <FaBriefcase /> },
-    { label: "Contato", to: "contato", icon: <FaPhone /> },
-  ];
-
   // useEffect para controlar o scroll ao abrir e fechar o menu
-
   useEffect(() => {
     // Se menu estiver aberto, adicionar a classe para bloquear o scroll
     if (isOpen) {
@@ -108,7 +91,7 @@ export default function Header() {
 
           {/* Ul */}
           <ul className="hidden md:flex items-center gap-4">
-            {links.map((link) => {
+            {itensNav.map((link) => {
               return (
                 <li key={link.to}>
                   <Link
@@ -141,7 +124,7 @@ export default function Header() {
           </button>
           {/* Lista de links */}
           <ul className="h-full flex flex-col items-center justify-center gap-6">
-            {links.map((link) => {
+            {itensNav.map((link) => {
               return (
                 <li key={link.to}>
                   <Link
