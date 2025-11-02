@@ -60,6 +60,7 @@ export default function Projetos() {
             title={projeto.nome}
             description={projeto.descricao}
             dateCreated={projeto.data_criacao}
+            technologies={projeto.tecnologias}
             linkDemo={projeto.linkDemo}
             linkRepo={projeto.linkRepo}
             status={projeto.status}
