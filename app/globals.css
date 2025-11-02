@@ -8,13 +8,13 @@
 @import "tailwindcss";
 
 /* Variáveis */
-/* theme {
+theme {
   --color-blue-default: rgb(43, 127, 255);
 }
 
 :root {
   --color-blue-default: rgb(43, 127, 255);
-} */
+}
 
 /* Fonte padrão no body */
 body {
