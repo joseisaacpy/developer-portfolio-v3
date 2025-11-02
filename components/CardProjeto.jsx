@@ -9,6 +9,7 @@ export default function CardProjeto({
   title,
   description,
   dateCreated,
+  technologies,
   status,
   linkDemo,
   linkRepo,
@@ -59,7 +60,7 @@ export default function CardProjeto({
 
   return (
     <div
-    data-aos="fade-up"
+      data-aos="fade-up"
       className="flex flex-col justify-between gap-1.5 p-4 rounded-lg shadow-md bg-slate-800 text-white w-full h-full"
       key={title}
     >
@@ -82,6 +83,23 @@ export default function CardProjeto({
           {status ? "Concluído" : "Em andamento"}
         </span>
       </p>
+
+      {/* div com tecnologais */}
+      {technologies && technologies.length > 0 ? (
+        <div className="flex flex-wrap gap-2">
+          {technologies.map((tech) => (
+            <span
+              key={tech}
+              className="inline-block bg-slate-700 px-2 py-1 rounded-md text-sm"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+      ) : (
+        <p className="text-gray-400 italic">Nenhuma tecnologia informada</p>
+      )}
+
       <div className="flex flex-col gap-2 justify-between">
         {/* link de demonstração */}
         <a
