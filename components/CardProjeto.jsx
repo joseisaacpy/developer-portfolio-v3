@@ -6,13 +6,13 @@ import { FaCalendar, FaStar, FaCode, FaLink } from "react-icons/fa";
 
 export default function CardProjeto({
   id,
-  title,
-  description,
-  dateCreated,
-  technologies,
-  status,
+  nome,
+  descricao,
+  data_criacao,
+  tecnologias,
   linkDemo,
   linkRepo,
+  status,
   isAdmin,
 }) {
   // Função para deletar um projeto
@@ -62,19 +62,19 @@ export default function CardProjeto({
     <div
       data-aos="fade-up"
       className="flex flex-col justify-between gap-1.5 p-4 rounded-lg shadow-md bg-slate-800 text-white w-full h-full"
-      key={title}
+      key={id}
     >
       <h2 className="text-xl font-bold bg-gradient-to-r bg-clip-text from-blue-100 to-blue-500 text-transparent">
         <FaCode className="text-white inline-block mr-1" />
         {""}
-        {title}
+        {nome}
       </h2>
       <p>
-        <FaMessage className="inline-block mr-1" /> {description}
+        <FaMessage className="inline-block mr-1" /> {descricao}
       </p>
       <p>
         <FaCalendar className="inline-block mr-1" />
-        Data de criação: {new Date(dateCreated).toLocaleDateString("pt-BR")}
+        Data de criação: {new Date(data_criacao).toLocaleDateString("pt-BR")}
       </p>
       <p>
         <FaStar className="inline-block mr-1" />
@@ -85,14 +85,14 @@ export default function CardProjeto({
       </p>
 
       {/* div com tecnologais */}
-      {technologies && technologies.length > 0 ? (
+      {tecnologias && tecnologias.length > 0 ? (
         <div className="flex flex-wrap gap-2">
-          {technologies.map((tech) => (
+          {tecnologias.map((tec) => (
             <span
-              key={tech}
+              key={tec}
               className="inline-block bg-slate-700 px-2 py-1 rounded-md text-sm"
             >
-              {tech}
+              {tec}
             </span>
           ))}
         </div>

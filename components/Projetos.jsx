@@ -57,10 +57,10 @@ export default function Projetos() {
         {projetos.map((projeto) => (
           <CardProjeto
             key={projeto.id}
-            title={projeto.nome}
-            description={projeto.descricao}
-            dateCreated={projeto.data_criacao}
-            technologies={projeto.tecnologias}
+            nome={projeto.nome}
+            descricao={projeto.descricao}
+            data_criacao={projeto.data_criacao}
+            tecnologias={projeto.tecnologias}
             linkDemo={projeto.linkDemo}
             linkRepo={projeto.linkRepo}
             status={projeto.status}
