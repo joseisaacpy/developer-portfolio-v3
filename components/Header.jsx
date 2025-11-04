@@ -1,9 +1,13 @@
 "use client";
 
+// Importar motion
+import { motion } from "framer-motion";
+
 // Importa imagens
 import Image from "next/image";
 import logoImg from "@/public/img/dev-jose.webp";
 
+// Importa icones
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 
 // Importa hooks
@@ -14,6 +18,21 @@ import { Link } from "react-scroll";
 
 // Importa os links
 import itensNav from "@/data/itensNav";
+// Animação fadeIn
+const fadeIn = {
+  hidden: {
+    opacity: 0,
+    x: -100,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1,
+      ease: "easeOut",
+    },
+  },
+};
 
 export default function Header() {
   // Estado pra controlar o menu
@@ -64,33 +83,42 @@ export default function Header() {
               : "bg-slate-800"
           }`}
         >
-          {/* Logo */}
-          <Link
-            to="home"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer flex items-center gap-1 hover:scale-110 transition-all duration-300"
-          >
-            <Image
-              src={logoImg}
-              alt="Logo de José Isaac"
-              className="rounded-full w-12 h-12"
-            />
+          <motion.div variants={fadeIn} initial="hidden" animate="show">
+            {/* Logo */}
+            <Link
+              to="home"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer flex items-center gap-1 hover:scale-110 transition-all duration-300"
+            >
+              <Image
+                src={logoImg}
+                alt="Logo de José Isaac"
+                className="rounded-full w-12 h-12"
+              />
 
-            <span className="hidden md:flex text-lg font-bold">
-              joseisaacpy
-            </span>
-          </Link>
+              <span className="hidden md:flex text-lg font-bold">
+                joseisaacpy
+              </span>
+            </Link>
+          </motion.div>
 
           {/* Menu burguer */}
-          <IoMdMenu
-            className="md:hidden cursor-pointer text-3xl font-bold"
-            aria-label="Abrir menu"
-            onClick={() => setIsOpen(!isOpen)}
-          />
+          <motion.div variants={fadeIn} initial="hidden" animate="show">
+            <IoMdMenu
+              className="md:hidden cursor-pointer text-3xl font-bold"
+              aria-label="Abrir menu"
+              onClick={() => setIsOpen(!isOpen)}
+            />
+          </motion.div>
 
           {/* Ul */}
-          <ul className="hidden md:flex items-center gap-4">
+          <motion.ul
+            variants={fadeIn}
+            initial="hidden"
+            animate="show"
+            className="hidden md:flex items-center gap-4"
+          >
             {itensNav.map((link) => {
               return (
                 <li key={link.to}>
@@ -106,13 +134,14 @@ export default function Header() {
                 </li>
               );
             })}
-          </ul>
+          </motion.ul>
         </nav>
         {/* Menu mobile */}
-        <div
-          className={`md:hidden backdrop-blur-2xl bg-black/50 w-full h-screen inset-0 fixed text-white z-50 transition-all duration-500 ${
-            isOpen ? "opacity-100 " : "opacity-0 pointer-events-none"
-          }`}
+        <motion.div
+          variants={fadeIn}
+          initial="hidden"
+          animate={isOpen ? "show" : "hidden"}
+          className="md:hidden backdrop-blur-2xl bg-black/50 w-full h-screen inset-0 fixed text-white z-50"
         >
           {/* Botão de fechar menu */}
           <button
@@ -144,7 +173,7 @@ export default function Header() {
               );
             })}
           </ul>
-        </div>
+        </motion.div>
       </header>
     </>
   );
