@@ -2,6 +2,9 @@
 import Image from "next/image";
 import heroImage from "@/public/img/hero-image.webp";
 
+// Link do scroll
+import { Link } from "react-scroll";
+
 export default function Home() {
   return (
     <>
@@ -24,9 +27,14 @@ export default function Home() {
           <p className="text-lg md:text-xl text-gray-200">
             Transformando ideias em códigos e tomando um cafezinho.
           </p>
-          <p className="text-lg md:text-xl text-blue-500 font-bold">
-            Vamos criar algo juntos?
-          </p>
+          <Link
+            to="contato"
+            smooth={true}
+            duration={500}
+            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300 cursor-pointer"
+          >
+            Vamos conversar?
+          </Link>
         </div>
       </section>
     </>
