@@ -21,6 +21,7 @@ import Tecnologias from "@/components/Tecnologias";
 import Experiencias from "@/components/Experiencias";
 import Projetos from "@/components/Projetos";
 import Contato from "@/components/Contato";
+import Bonus from "@/components/Bonus";
 import Footer from "@/components/Footer";
 import { ButtomPlayerSound } from "@/components/ButtomPlayerSound";
 
@@ -77,6 +78,8 @@ export default function SinglePage() {
       <Element name="contato">
         <Contato />
       </Element>
+
+      <Bonus />
 
       {/* Footer */}
       <Footer />
