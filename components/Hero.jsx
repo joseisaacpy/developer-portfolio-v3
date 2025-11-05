@@ -27,14 +27,7 @@ export default function Home() {
           <p className="text-lg md:text-xl text-gray-200">
             Transformando ideias em códigos e tomando um cafezinho.
           </p>
-          <Link
-            to="contato"
-            smooth={true}
-            duration={500}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300 cursor-pointer"
-          >
-            Vamos conversar?
-          </Link>
+          <p className="text-white">Vamos conversar?</p>
         </div>
       </section>
     </>
