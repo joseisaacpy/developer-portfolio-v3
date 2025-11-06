@@ -137,11 +137,10 @@ export default function Header() {
           </motion.ul>
         </nav>
         {/* Menu mobile */}
-        <motion.div
-          variants={fadeIn}
-          initial="hidden"
-          animate={isOpen ? "show" : "hidden"}
-          className="md:hidden backdrop-blur-2xl bg-black/50 w-full h-screen inset-0 fixed text-white z-50"
+        <div
+          className={`md:hidden backdrop-blur-2xl bg-black/50 w-full h-screen inset-0 fixed text-white z-50 transition-all duration-500 ${
+            isOpen ? "opacity-100 " : "opacity-0 pointer-events-none"
+          }`}
         >
           {/* Botão de fechar menu */}
           <button
@@ -173,7 +172,7 @@ export default function Header() {
               );
             })}
           </ul>
-        </motion.div>
+        </div>
       </header>
     </>
   );
