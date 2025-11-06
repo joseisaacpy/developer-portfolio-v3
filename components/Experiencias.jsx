@@ -34,7 +34,6 @@ export default function Experiencias() {
           })}
         </div>
       </section>
-      ;
     </>
   );
 }
