@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 // Importa imagens
 import Image from "next/image";
-import logoImg from "@/public/img/dev-jose.webp";
+import logoImg from "@/public/images/dev-jose.webp";
 
 // Importa icones
 import { IoMdMenu, IoMdClose } from "react-icons/io";

@@ -1,5 +1,5 @@
 // Imagem de fundo
-import techsBg from "@/public/img/background-techs.webp";
+import techsBg from "@/public/images/background-techs.webp";
 
 // Loader
 import Loader from "./Loader";

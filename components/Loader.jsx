@@ -2,7 +2,7 @@
 import Image from "next/image";
 
 // Logo
-import logoImg from "@/public/img/dev-jose.webp";
+import logoImg from "@/public/images/dev-jose.webp";
 
 export default function Loader() {
   return (

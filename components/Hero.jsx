@@ -1,6 +1,6 @@
 // imagem hero
 import Image from "next/image";
-import heroImage from "@/public/img/hero-image.webp";
+import heroImage from "@/public/images/hero-image.webp";
 
 // Link do scroll
 import { Link } from "react-scroll";
