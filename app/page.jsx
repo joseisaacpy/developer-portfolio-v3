@@ -23,7 +23,7 @@ import Projetos from "@/components/Projetos";
 import Contato from "@/components/Contato";
 import Bonus from "@/components/Bonus";
 import Footer from "@/components/Footer";
-import { ButtomPlayerSound } from "@/components/ButtomPlayerSound";
+import { ButtomPlayerSound } from "@/components/ButtonPlayerSound";
 
 export default function SinglePage() {
   // Efeito para o scroll com lenis
