@@ -51,6 +51,12 @@ const tecnologias = [
     categoria: "Banco de dados",
   },
   {
+    nome: "PostgreSQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+    categoria: "Banco de dados",
+  },
+
+  {
     nome: "MongoDB",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
     categoria: "Banco de dados",
