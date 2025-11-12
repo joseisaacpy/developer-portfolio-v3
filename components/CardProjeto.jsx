@@ -61,7 +61,7 @@ export default function CardProjeto({
   return (
     <div
       data-aos="fade-up"
-      className="flex flex-col justify-between gap-1.5 p-4 rounded-lg shadow-md bg-slate-800 text-white w-full h-full"
+      className="card-projeto"
       key={id}
     >
       <h2 className="text-xl font-bold bg-gradient-to-r bg-clip-text from-blue-100 to-blue-500 text-transparent">

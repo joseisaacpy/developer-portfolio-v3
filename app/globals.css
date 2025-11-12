@@ -42,3 +42,8 @@ body {
 .card-tecnologia {
   @apply flex flex-col items-center bg-white border border-blue-600 shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition-all duration-300;
 }
+
+/* Card projeto */
+.card-projeto {
+  @apply flex flex-col justify-between gap-1.5 p-4 rounded-lg shadow-md bg-slate-800 text-white w-full h-full;
+}
