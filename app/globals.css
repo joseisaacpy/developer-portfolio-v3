@@ -37,3 +37,8 @@ body {
   background: var(--color-blue-default); /* cor da alça */
   border-radius: 10px; /* bordas arredondadas */
 }
+
+/* Card tecnologia */
+.card-tecnologia {
+  @apply flex flex-col items-center bg-white border border-blue-600 shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition-all duration-300;
+}

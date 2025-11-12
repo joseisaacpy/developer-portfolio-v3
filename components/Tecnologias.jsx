@@ -49,9 +49,7 @@ export default function Tecnologias() {
                   }
                 }}
                 className={`p-2 bg-blue-600 rounded-2xl text-white cursor-pointer hover:scale-105 transition-all ${
-                  categoria === categoriaFiltrada
-                    ? "opacity-100"
-                    : "opacity-50"
+                  categoria === categoriaFiltrada ? "opacity-100" : "opacity-50"
                 }`}
               >
                 {categoria}
@@ -71,8 +69,8 @@ export default function Tecnologias() {
                 key={tecnologia.nome}
                 data-aos="fade-up"
                 data-aos-delay={index * 100} // atraso progressivo
-                data-aos-duration="600"
-                className="flex flex-col items-center bg-white border border-blue-600 shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+                data-aos-duration="300"
+                className="card-tecnologia"
               >
                 <Image
                   src={tecnologia.icon}
