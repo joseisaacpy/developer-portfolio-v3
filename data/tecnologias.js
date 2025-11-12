@@ -66,6 +66,11 @@ const tecnologias = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
     categoria: "Outros",
   },
+  {
+    nome: "Figma",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
+    categoria: "Outros",
+  },
 ];
 
 export default tecnologias;
