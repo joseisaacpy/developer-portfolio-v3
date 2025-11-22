@@ -7,19 +7,11 @@ import Script from "next/script";
 // Toast/Notificações
 import { ToastContainer } from "react-toastify";
 
-// Importa fonte local
-import localFont from "next/font/local";
-
-// Fonte local
-const poppins = localFont({
-  src: [
-    {
-      path: "../public/fonts/Poppins-Regular.ttf",
-      weight: "400",
-      style: "normal",
-    },
-  ],
-  variable: "--font-poppins",
+// Fonte
+import { Poppins } from "next/font/google";
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata = {
