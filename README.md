@@ -1,12 +1,13 @@
 # 💼 Developer Portfolio v3
 
-Portfólio pessoal desenvolvido com **Next.js**, **Prisma** e **TailwindCSS**, utilizando as novas **App Routes** do Next 13+.
+Portfólio pessoal desenvolvido com **Next.js**, **Prisma** **MongoDB**, e **TailwindCSS**, utilizando as novas **App Routes** do Next 13+.
 
 ---
 
 ## 🚀 Tecnologias
 
 - [Next.js](https://nextjs.org/)
+- [MongoDB](https://mongodb.com)
 - [Prisma ORM](https://www.prisma.io/)
 - [TailwindCSS](https://tailwindcss.com/)
 
