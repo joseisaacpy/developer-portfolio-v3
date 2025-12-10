@@ -9,7 +9,6 @@ datasource db {
 
 model Projeto {
   id           String   @id @default(auto()) @map("_id") @db.ObjectId
-  slug         String?
   tecnologias  String[]
   nome         String
   descricao    String
