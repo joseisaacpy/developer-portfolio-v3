@@ -59,18 +59,14 @@ export default function CardProjeto({
   };
 
   return (
-    <div
-      data-aos="fade-up"
-      className="card-projeto"
-      key={id}
-    >
-      <h2 className="text-xl font-bold bg-gradient-to-r bg-clip-text from-blue-100 to-blue-500 text-transparent">
+    <div data-aos="fade-up" className="card-projeto" key={id}>
+      <h2 className="text-xl font-bold bg-linear-to-r bg-clip-text from-blue-100 to-blue-500 text-transparent">
         <FaCode className="text-white inline-block mr-1" />
-        {""}
         {nome}
       </h2>
       <p>
-        <FaMessage className="inline-block mr-1" /> {descricao}
+        <FaMessage className="inline-block mr-1" />
+        {descricao}
       </p>
       <p>
         <FaCalendar className="inline-block mr-1" />
@@ -78,7 +74,7 @@ export default function CardProjeto({
       </p>
       <p>
         <FaStar className="inline-block mr-1" />
-        Status:{" "}
+        Status:
         <span className={status ? "text-green-400" : "text-yellow-400"}>
           {status ? "Concluído" : "Em andamento"}
         </span>
@@ -99,7 +95,6 @@ export default function CardProjeto({
       ) : (
         <p className="text-gray-400 italic">Nenhuma tecnologia informada</p>
       )}
-
       <div className="flex flex-col gap-2 justify-between">
         {/* link de demonstração */}
         <a
