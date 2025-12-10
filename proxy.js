@@ -1,10 +1,7 @@
-// Importa o NextResponse
 import { NextResponse } from "next/server";
 
-// Caminho para redirecionar quando não estiver autenticado
 const REDIRECT_WHEN_NOT_AUTHENTICATED = "/login";
 
-// Rotas públicas
 const publicRoutes = [
   {
     path: "/login",
@@ -17,31 +14,41 @@ const publicRoutes = [
 ];
 
 export function proxy(req) {
-  // Pega o cookie "auth"
   const auth = req.cookies.get("auth")?.value;
 
-  const publicRoute = publicRoutes.find(
-    (route) => route.path === req.nextUrl.pathname
-  );
+  const { pathname } = req.nextUrl;
 
-  // se não tiver token e não for uma rota publica
+  const publicRoute = publicRoutes.find((route) => route.path === pathname);
+  console.log("pathname:", req.nextUrl.pathname);
+  console.log("auth:", auth);
+  console.log("publicRoute:", publicRoute);
+
+  //  1. Usuário NÃO autenticado e rota NÃO é pública
   if (!auth && !publicRoute) {
     const redirectUrl = req.nextUrl.clone();
     redirectUrl.pathname = REDIRECT_WHEN_NOT_AUTHENTICATED;
     return NextResponse.redirect(redirectUrl);
   }
 
-  // se tem token e for a rota que redireciona
-  if (auth && publicRoute.whenAuthenticated === "redirect") {
+  //  2. Usuário AUTENTICADO tentando acessar rota pública que exige redirect
+  if (auth && publicRoute?.whenAuthenticated === "redirect") {
     const redirectUrl = req.nextUrl.clone();
     redirectUrl.pathname = "/dashboard";
     return NextResponse.redirect(redirectUrl);
   }
 
-  // se tiver token e for uma rota publica que não redireciona
-  if (auth && publicRoute.whenAuthenticated === "next") {
+  //  3. Usuário AUTENTICADO acessando rota pública que permite acesso
+  if (auth && publicRoute?.whenAuthenticated === "next") {
     return NextResponse.next();
   }
+
+  //  4. Usuário NÃO autenticado em rota pública
+  if (!auth && publicRoute) {
+    return NextResponse.next();
+  }
+
+  //  5. Rotas autenticadas com auth válido
+  return NextResponse.next();
 }
 
 export const config = {
