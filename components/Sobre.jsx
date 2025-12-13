@@ -41,15 +41,16 @@ export default function Sobre() {
 
       <div className="w-full md:w-2/3 text-center md:text-left">
         <h2
-        data-aos="fade-up" 
-        className="text-3xl font-bold mb-4 text-blue-600">
+          data-aos="fade-up"
+          className="text-3xl font-bold mb-4 text-blue-default"
+        >
           Sobre mim
           <FaCoffee className="inline-block ml-2" />
           <FaLaptop className="inline-block ml-2" />
         </h2>
         <p data-aos="fade-up" className="text-lg leading-relaxed mb-4">
           Sou um
-          <strong className="text-blue-600">
+          <strong className="text-blue-default">
             {" "}
             desenvolvedor Full Stack
           </strong>{" "}
@@ -57,17 +58,18 @@ export default function Sobre() {
           personalidade. Com o notebook sempre na tomada e uma xícara de café ao
           lado, crio interfaces modernas, funcionais, acessíveis e responsivas.
         </p>
-        <p  data-aos="fade-up" className="text-lg leading-relaxed">
-          Apaixonado por <strong className="text-blue-600">tecnologia</strong>,
-          estou em constante evolução — aprendendo novas ferramentas e em busca
-          de novos desafios.
+        <p data-aos="fade-up" className="text-lg leading-relaxed">
+          Apaixonado por{" "}
+          <strong className="text-blue-default">tecnologia</strong>, estou em
+          constante evolução — aprendendo novas ferramentas e em busca de novos
+          desafios.
         </p>
         <a
           data-aos="fade-up"
           onClick={handleDownload}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block mt-6 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded shadow transition duration-300 cursor-pointer"
+          className="inline-block mt-6 px-6 py-3 bg-blue-default/80 hover:bg-blue-default text-white font-medium rounded shadow transition duration-300 cursor-pointer"
         >
           Baixar Currículo
         </a>

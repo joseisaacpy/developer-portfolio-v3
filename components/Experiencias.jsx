@@ -16,10 +16,10 @@ export default function Experiencias() {
               // Article
               <article
                 key={index}
-                className="relative bg-white p-6 rounded-lg shadow hover:shadow-lg hover:shadow-blue-500 transition-all"
+                className="relative bg-white p-6 rounded-lg shadow hover:shadow-lg hover:shadow-blue-default transition-all"
               >
                 {/* Span para bolinha */}
-                <span className="absolute w-8 h-8 top-[-8px] left-[-10px] rounded-full bg-gradient-to-tl from-blue-300 to-blue-900 font-bold text-white shadow-md">
+                <span className="absolute w-8 h-8 top-[-8px] left-[-10px] rounded-full bg-gradient-to-tl from-blue-default/50 to-blue-default font-bold text-white shadow-md">
                   {/* {index - experiencias.length + 1}{" "} */}
                   {/* +1 para não iniciar no 0 */}
                 </span>

@@ -103,7 +103,7 @@ export default function CardProjeto({
           rel="noopener noreferrer"
           className={`flex items-center gap-2 px-2 py-1 rounded-md transition-colors duration-200 ${
             linkDemo
-              ? "bg-blue-600 hover:bg-blue-700"
+              ? "bg-blue-default hover:bg-blue-default"
               : "bg-gray-500 cursor-not-allowed"
           }`}
         >
@@ -117,7 +117,7 @@ export default function CardProjeto({
           rel="noopener noreferrer"
           className={`flex items-center gap-2 px-2 py-1 rounded-md transition-colors duration-200 ${
             linkRepo
-              ? "bg-blue-600 hover:bg-blue-700"
+              ? "bg-blue-default hover:bg-blue-default"
               : "bg-gray-500 cursor-not-allowed"
           }`}
         >
@@ -130,7 +130,7 @@ export default function CardProjeto({
         {/* botão de editar */}
         <button
           onClick={handleEdit}
-          className="flex items-center gap-2 px-2 py-1 rounded-md transition-colors duration-200 cursor-pointer bg-blue-600 hover:bg-blue-700"
+          className="flex items-center gap-2 px-2 py-1 rounded-md transition-colors duration-200 cursor-pointer bg-blue-default hover:bg-blue-default"
         >
           Editar
         </button>
