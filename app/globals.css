@@ -2,12 +2,8 @@
 @import "tailwindcss";
 
 /* Variáveis */
-theme {
-  --color-blue-default: rgb(43, 127, 255);
-}
-
-:root {
-  --color-blue-default: rgb(43, 127, 255);
+@theme {
+  --color-blue-default: #2d80fc;
 }
 
 /* Fonte padrão no body */
@@ -33,7 +29,7 @@ body {
 
 /* Card tecnologia */
 .card-tecnologia {
-  @apply flex flex-col items-center bg-white border border-blue-600 shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition-all duration-300;
+  @apply flex flex-col items-center bg-white border border-blue-default shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition-all duration-300;
 }
 
 /* Card projeto */

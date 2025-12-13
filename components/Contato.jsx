@@ -26,28 +26,28 @@ export default function Contato() {
           <a
             target="_blank"
             href="https://www.linkedin.com/in/jos%C3%A9-isaac-nascimento/"
-            className="hover:scale-105 transition duration-300 hover:text-blue-500"
+            className="hover:scale-105 transition duration-300 hover:text-blue-default"
           >
             <FaLinkedin className="text-4xl md:text-3xl" />
           </a>
           <a
             target="_blank"
             href="https://github.com/joseisaacpy"
-            className="hover:scale-105 transition duration-300 hover:text-blue-500"
+            className="hover:scale-105 transition duration-300 hover:text-blue-default"
           >
             <FaGithub className="text-4xl md:text-3xl" />
           </a>
           <a
             target="_blank"
             href="https://www.instagram.com/j0se_isaacsn/"
-            className="hover:scale-105 transition duration-300 hover:text-blue-500"
+            className="hover:scale-105 transition duration-300 hover:text-blue-default"
           >
             <FaInstagram className="text-4xl md:text-3xl" />
           </a>
           <a
             onClick={handleEmailClick}
             title="Copiar e-mail"
-            className="cursor-pointer hover:scale-105 transition duration-300 hover:text-blue-500"
+            className="cursor-pointer hover:scale-105 transition duration-300 hover:text-blue-default"
           >
             <FaEnvelope className="text-4xl md:text-3xl" />
           </a>

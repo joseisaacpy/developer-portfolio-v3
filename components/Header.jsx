@@ -123,7 +123,7 @@ export default function Header() {
               return (
                 <li key={link.to}>
                   <Link
-                    className="cursor-pointer transition-all hover:underline"
+                    className="cursor-pointer font-semibold hover:text-blue-default block transition-all duration-300"
                     to={link.to}
                     smooth={true}
                     duration={500}
