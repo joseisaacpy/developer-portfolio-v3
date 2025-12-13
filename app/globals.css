@@ -1,9 +1,3 @@
-/* Importa a fonte */
-@font-face {
-  font-family: "Poppins";
-  src: url("/fonts/Poppins-Regular.ttf");
-}
-
 /* Importa o tailwind */
 @import "tailwindcss";
 
