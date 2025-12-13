@@ -60,7 +60,7 @@ export default function CardProjeto({
 
   return (
     <div data-aos="fade-up" className="card-projeto" key={id}>
-      <h2 className="text-xl font-bold bg-linear-to-r bg-clip-text from-blue-100 to-blue-500 text-transparent">
+      <h2 className="text-xl font-bold bg-linear-to-r bg-clip-text from-blue-100 to-blue-default text-transparent">
         <FaCode className="text-white inline-block mr-1" />
         {nome}
       </h2>
@@ -74,7 +74,7 @@ export default function CardProjeto({
       </p>
       <p>
         <FaStar className="inline-block mr-1" />
-        Status:
+        Status:{" "}
         <span className={status ? "text-green-400" : "text-yellow-400"}>
           {status ? "Concluído" : "Em andamento"}
         </span>
@@ -103,7 +103,7 @@ export default function CardProjeto({
           rel="noopener noreferrer"
           className={`flex items-center gap-2 px-2 py-1 rounded-md transition-colors duration-200 ${
             linkDemo
-              ? "bg-blue-default hover:bg-blue-default"
+              ? "bg-blue-default hover:bg-blue-dark"
               : "bg-gray-500 cursor-not-allowed"
           }`}
         >
@@ -117,7 +117,7 @@ export default function CardProjeto({
           rel="noopener noreferrer"
           className={`flex items-center gap-2 px-2 py-1 rounded-md transition-colors duration-200 ${
             linkRepo
-              ? "bg-blue-default hover:bg-blue-default"
+              ? "bg-blue-default hover:bg-blue-dark"
               : "bg-gray-500 cursor-not-allowed"
           }`}
         >
