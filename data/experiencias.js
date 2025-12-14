@@ -3,7 +3,7 @@ export const experiencias = [
     empresa: "Grupo Adriano Cobuccio",
     cargo: "Aprendiz - Assistente de Dados",
     admissao: "11/2024",
-    fim: "",
+    fim: "12/2025",
     descricao:
       "Apoio na análise de dados e acompanhamento de rotinas administrativas.",
   },
