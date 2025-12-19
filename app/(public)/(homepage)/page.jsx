@@ -3,6 +3,8 @@
 // Lenis Scroll
 import Lenis from "@studio-freight/lenis";
 
+import SnowFallDecember from "@/components/showSnow";
+
 // Element do scroll
 import { Element } from "react-scroll";
 
@@ -57,6 +59,7 @@ export default function SinglePage() {
 
       <Element name="home">
         <Home />
+        <SnowFallDecember />
       </Element>
 
       <Element name="sobre">
