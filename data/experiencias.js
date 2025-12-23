@@ -1,11 +1,19 @@
 export const experiencias = [
+  // {
+  //   empresa: "Autônomo",
+  //   cargo: "Desenvolvedor Full Stack",
+  //   admissao: "02/2025",
+  //   fim: "Atual",
+  //   descricao:
+  //     "Desenvolvimento de aplicações full stack com Next.js, Node.js e Prisma, incluindo autenticação JWT, consumo de APIs REST, integração com banco de dados e deploy.",
+  // },
   {
-    empresa: "Autônomo",
-    cargo: "Desenvolvedor Full Stack",
-    admissao: "02/2025",
-    fim: "Atual",
+    empresa: "Piauí Frontais",
+    cargo: "Auxiliar de Sistema",
+    admissao: "12/2025",
+    fim: "",
     descricao:
-      "Desenvolvimento de aplicações full stack com Next.js, Node.js e Prisma, incluindo autenticação JWT, consumo de APIs REST, integração com banco de dados e deploy.",
+      "Atualização de bases de dados, manutenção de planilhas operacionais e criação de dashboards simples no Google Sheets. Estudo de Python (Pandas) e gspread visando futuras automações de processos.",
   },
   {
     empresa: "Grupo Adriano Cobuccio",
