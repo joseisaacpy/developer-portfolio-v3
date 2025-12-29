@@ -16,11 +16,10 @@ export default function Projetos() {
 
   // Função para buscar os projetos da API
   const fetchData = async () => {
-    const url = "/api/projetos";
     try {
-      const response = await fetch(url);
+      const response = await fetch("/api/projetos");
       const data = await response.json();
-      setProjetos(data);
+      setProjetos(data.data);
     } catch (error) {
       console.error(error);
     } finally {
