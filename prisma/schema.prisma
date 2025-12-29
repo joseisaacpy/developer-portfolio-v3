@@ -3,12 +3,11 @@ generator client {
 }
 
 datasource db {
-  provider = "mongodb"
-  url      = env("MONGODB_URI")
+  provider = "postgresql"
 }
 
 model Projeto {
-  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  id           String   @id @default(uuid())
   tecnologias  String[]
   nome         String
   descricao    String
@@ -16,6 +15,4 @@ model Projeto {
   linkDemo     String
   linkRepo     String
   status       Boolean
-
-  @@map("projetos")
 }
