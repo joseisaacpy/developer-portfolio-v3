@@ -82,23 +82,6 @@ export default function CardProjeto({
           {!linkRepo ? "Sem link" : "Link do Repositório"}
         </a>
       </div>
-      {/* Div de admin */}
-      <div className={`${isAdmin ? "flex" : "hidden"} gap-2 flex-col`}>
-        {/* botão de editar */}
-        <button
-          onClick={handleEdit}
-          className="flex items-center gap-2 px-2 py-1 rounded-md transition-colors duration-200 cursor-pointer bg-blue-default hover:bg-blue-default"
-        >
-          Editar
-        </button>
-        {/* botão de excluir */}
-        <button
-          onClick={handleDelete}
-          className="flex items-center gap-2 px-2 py-1 rounded-md transition-colors duration-200 cursor-pointer bg-red-600 hover:bg-red-700"
-        >
-          Excluir
-        </button>
-      </div>
     </div>
   );
 }
