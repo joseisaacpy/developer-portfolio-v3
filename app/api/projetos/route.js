@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import { NextResponse } from "next/server";
 
 // READ (busca todos os projetos)
 export async function GET() {
@@ -10,17 +11,14 @@ export async function GET() {
       },
     });
     // retorna os projetos
-    return Response.json({
-      data: projetos,
-      status: 200,
-    });
+    return NextResponse.json({ data: projetos }, { status: 200 });
   } catch (error) {
     // caso ocorra algum erro
     console.error(error);
-    return new Response.json({
-      error: "Erro ao buscar projetos",
-      status: 500,
-    });
+    return NextResponse.json(
+      { error: "Erro ao buscar projetos" },
+      { status: 500 }
+    );
   }
 }
 
@@ -31,15 +29,20 @@ export async function POST(req) {
     const novoProjeto = await prisma.projeto.create({
       data: body,
     });
-    return Response.json({
-      message: "Projeto criado com sucesso",
-      projeto: novoProjeto,
-    });
+    return NextResponse.json(
+      {
+        message: "Projeto criado com sucesso",
+        projeto: novoProjeto,
+      },
+      {
+        status: 201,
+      }
+    );
   } catch (error) {
     console.error(error);
-    return new Response.json({
-      error: "Erro ao criar projeto",
-      status: 500,
-    });
+    return NextResponse.json(
+      { error: "Erro ao criar projeto" },
+      { status: 500 }
+    );
   }
 }
