@@ -15,49 +15,6 @@ export default function CardProjeto({
   status,
   isAdmin,
 }) {
-  // Função para deletar um projeto
-  const handleDelete = async () => {
-    try {
-      const response = await fetch(`/api/projetos/${id}`, {
-        method: "DELETE",
-      });
-
-      if (response.ok) {
-        alert("Projeto deletado com sucesso");
-        window.location.reload();
-      }
-    } catch (error) {
-      console.error(error);
-      alert("Erro ao deletar projeto");
-    }
-  };
-  // Função para editar um projeto
-  const handleEdit = async () => {
-    try {
-      const response = await fetch(`/api/projetos/${id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          nome,
-          descricao,
-          data_criacao,
-          linkDemo,
-          linkRepo,
-          status,
-        }),
-      });
-      if (response.ok) {
-        alert("Projeto editado com sucesso");
-        window.location.reload();
-      }
-    } catch (error) {
-      console.error(error);
-      alert("Erro ao editar projeto");
-    }
-  };
-
   return (
     <div data-aos="fade-up" className="card-projeto" key={id}>
       <h2 className="text-xl font-bold bg-linear-to-r bg-clip-text from-blue-100 to-blue-default text-transparent">
