@@ -1,5 +1,6 @@
 import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
+export const runtime = "nodejs";
 
 // READ (busca todos os projetos)
 export async function GET() {
