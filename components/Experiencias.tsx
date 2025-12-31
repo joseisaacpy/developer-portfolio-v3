@@ -19,7 +19,7 @@ export default function Experiencias() {
                 className="relative bg-white p-6 rounded-lg shadow hover:shadow-lg hover:shadow-blue-default transition-all"
               >
                 {/* Span para bolinha */}
-                <span className="absolute w-8 h-8 top-[-8px] left-[-10px] rounded-full bg-linear-to-tl from-blue-default/50 to-blue-default font-bold text-white shadow-md"></span>
+                <span className="absolute w-8 h-8 -top-2 -left-2.5 rounded-full bg-linear-to-tl from-blue-default/50 to-blue-default font-bold text-white shadow-md"></span>
                 <h3 className="font-bold">{exp.cargo}</h3>
                 <p>{exp.empresa}</p>
                 <p className="text-sm">

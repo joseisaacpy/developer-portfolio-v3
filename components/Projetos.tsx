@@ -5,6 +5,8 @@ import techsBg from "@/public/images/background-techs.webp";
 // Loader
 import Loader from "./Loader";
 
+import { ProjetoProps } from "@/types/projeto";
+
 // Card
 import CardProjeto from "./CardProjeto";
 
@@ -12,7 +14,7 @@ import CardProjeto from "./CardProjeto";
 import { useState, useEffect } from "react";
 
 export default function Projetos() {
-  const [projetos, setProjetos] = useState([]); // Estado para armazenar os projetos
+  const [projetos, setProjetos] = useState<ProjetoProps[]>([]); // Estado para armazenar os projetos
   const [loading, setLoading] = useState(true); // Estado para controlar o carregamento (começa como true para mostrar o loader)
 
   // Função para buscar os projetos da API

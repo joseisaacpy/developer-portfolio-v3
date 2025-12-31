@@ -7,10 +7,9 @@ import { FaMusic, FaPause } from "react-icons/fa";
 import { useState, useRef } from "react";
 
 export function ButtomPlayerSound() {
-  //
-  const audioRef = useRef(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  //   Estado para controlar o som
+  // Estado para controlar o som
   const [isPlaying, setIsPlaying] = useState(false); // Começa com o som desligado
 
   const togglePlay = () => {

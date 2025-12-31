@@ -20,7 +20,7 @@ export default function Contato() {
           src={japanImg}
           loading="lazy"
           alt="Imagem de um lugar japonês"
-          className="w-full h-auto max-h-[350px] object-cover rounded-t-2xl"
+          className="w-full h-auto max-h-87.5 object-cover rounded-t-2xl"
         />
         <div className="p-2 bg-white flex items-center justify-center gap-6 rounded-b-2xl w-full">
           <a
