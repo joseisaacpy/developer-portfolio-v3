@@ -30,7 +30,7 @@ body {
 
 /* Card tecnologia */
 .card-tecnologia {
-  @apply flex flex-col items-center bg-white border border-blue-default shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition-all duration-300;
+  @apply flex flex-col items-center justify-center gap-2 bg-white border border-blue-default shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition-all duration-300;
 }
 
 /* Card projeto */
