@@ -3,12 +3,12 @@
 import techsBg from "@/public/images/background-techs.webp";
 
 // Loader
-import Loader from "./Loader";
+import Loader from "@/components/Loader";
 
 import { ProjetoProps } from "@/types/projeto";
 
 // Card
-import CardProjeto from "./CardProjeto";
+import CardProjeto from "@/components/CardProjeto";
 
 // Hooks
 import { useState, useEffect } from "react";
