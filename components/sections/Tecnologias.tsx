@@ -1,14 +1,8 @@
 "use client";
-
-// Importa hooks
 import { useState } from "react";
-
-// Importa o next/image
 import Image from "next/image";
-
-// Importa array de tecnologias
 import tecnologias from "@/data/tecnologias";
-
+import CardTec from "../CardTec";
 // Array de categorias de tecnologias
 const categorias = [
   "Todas",
@@ -65,22 +59,12 @@ export default function Tecnologias() {
           {/* Renderiza as tecnologias filtradas */}
           {tecnologiaFiltrada.map((tecnologia, index) => {
             return (
-              <div
+              <CardTec
                 key={tecnologia.nome}
-                data-aos="fade-up"
-                data-aos-delay={index * 100} // atraso progressivo
-                data-aos-duration="300"
-                className="card-tecnologia"
-              >
-                <Image
-                  src={tecnologia.icon}
-                  width={80} // precisa manter algum valor mínimo para otimização
-                  height={80}
-                  className="w-16 h-auto"
-                  alt={`Ícone representando ${tecnologia.nome}`}
-                />
-                <p className="mt-2 text-sm font-medium">{tecnologia.nome}</p>
-              </div>
+                nome={tecnologia.nome}
+                icon={tecnologia.icon}
+                index={index}
+              />
             );
           })}
         </div>
