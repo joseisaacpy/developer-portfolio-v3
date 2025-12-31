@@ -61,6 +61,21 @@ const tecnologias = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
     categoria: "Banco de dados",
   },
+  {
+    nome: "Excel",
+    icon: "images/icons/excel.svg",
+    categoria: "Dados",
+  },
+  {
+    nome: "Google Sheets",
+    icon: "images/icons/sheets.svg",
+    categoria: "Dados",
+  },
+  {
+    nome: "Pandas",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original-wordmark.svg",
+    categoria: "Dados",
+  },
 
   {
     nome: "Git",
