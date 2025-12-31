@@ -17,12 +17,12 @@ import { useEffect } from "react";
 
 // Components
 import Header from "@/components/Header";
-import Home from "@/components/Hero";
-import Sobre from "@/components/Sobre";
-import Tecnologias from "@/components/Tecnologias";
-import Experiencias from "@/components/Experiencias";
-import Projetos from "@/components/Projetos";
-import Contato from "@/components/Contato";
+import Home from "@/components/sections/Hero";
+import Sobre from "@/components/sections/Sobre";
+import Tecnologias from "@/components/sections/Tecnologias";
+import Experiencias from "@/components/sections/Experiencias";
+import Projetos from "@/components/sections/Projetos";
+import Contato from "@/components/sections/Contato";
 import Bonus from "@/components/Bonus";
 import Footer from "@/components/Footer";
 import { ButtomPlayerSound } from "@/components/ButtonPlayerSound";
@@ -42,7 +42,7 @@ export default function SinglePage() {
       smoothWheel: true, // Habilita a animação de rolagem suave
     });
 
-    function ref(time) {
+    function ref(time: number) {
       lenis.raf(time);
       requestAnimationFrame(ref);
     }
