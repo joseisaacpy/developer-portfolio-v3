@@ -1,6 +1,6 @@
 export default function Loader() {
   return (
-    <div className="min-h-full min-w-full z-50 inset-0 fixed bg-gradient-to-br from-black to-blue-default flex flex-col gap-2 items-center justify-center transition-all duration-600">
+    <div className="min-h-full min-w-full z-50 inset-0 fixed bg-linear-to-br from-black to-blue-default flex flex-col gap-2 items-center justify-center transition-all duration-600">
       {/* Logo */}
       <img
         src="/images/dev-jose.webp"

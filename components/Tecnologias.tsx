@@ -22,7 +22,7 @@ export default function Tecnologias() {
   return (
     <section
       id="tecnologias"
-      className="py-16 bg-cover text-gray-900 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50"
+      className="py-16 bg-cover text-gray-900 bg-linear-to-br from-blue-50 via-indigo-50 to-purple-50"
     >
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-blue-default mb-5">

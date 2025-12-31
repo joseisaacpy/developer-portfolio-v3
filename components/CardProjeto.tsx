@@ -4,6 +4,17 @@
 import { FaMessage } from "react-icons/fa6";
 import { FaCalendar, FaStar, FaCode, FaLink } from "react-icons/fa";
 
+type CardProjetoProps = {
+  id: number;
+  nome: string;
+  descricao: string;
+  data_criacao: string;
+  tecnologias: string[];
+  linkDemo: string;
+  linkRepo: string;
+  status: boolean;
+};
+
 export default function CardProjeto({
   id,
   nome,
@@ -13,8 +24,7 @@ export default function CardProjeto({
   linkDemo,
   linkRepo,
   status,
-  isAdmin,
-}) {
+}: CardProjetoProps) {
   return (
     <div data-aos="fade-up" className="card-projeto" key={id}>
       <h2 className="text-xl font-bold bg-linear-to-r bg-clip-text from-blue-100 to-blue-default text-transparent">

@@ -24,9 +24,9 @@ export async function GET() {
 }
 
 // CREATE (cria um novo projeto)
-export async function POST(req) {
+export async function POST(request: Request) {
   try {
-    const body = await req.json();
+    const body = await request.json();
     const novoProjeto = await prisma.projeto.create({
       data: body,
     });

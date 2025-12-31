@@ -1,12 +1,4 @@
 export const experiencias = [
-  // {
-  //   empresa: "Autônomo",
-  //   cargo: "Desenvolvedor Full Stack",
-  //   admissao: "02/2025",
-  //   fim: "Atual",
-  //   descricao:
-  //     "Desenvolvimento de aplicações full stack com Next.js, Node.js e Prisma, incluindo autenticação JWT, consumo de APIs REST, integração com banco de dados e deploy.",
-  // },
   {
     empresa: "Piauí Frontais",
     cargo: "Auxiliar de Sistema",
