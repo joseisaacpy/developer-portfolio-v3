@@ -70,12 +70,12 @@ export default function SinglePage() {
         <Tecnologias />
       </Element>
 
-      <Element name="projetos">
-        <Projetos />
-      </Element>
-
       <Element name="experiencias">
         <Experiencias />
+      </Element>
+
+      <Element name="projetos">
+        <Projetos />
       </Element>
 
       <Element name="contato">
