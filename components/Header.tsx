@@ -129,7 +129,7 @@ export default function Header() {
                     }}
                     className="cursor-pointer text-2xl flex items-center justify-center gap-2 hover:scale-105 transition-transform"
                   >
-                    {link.icon}
+                    {<link.icon />}
                     {link.label}
                   </Link>
                 </li>
