@@ -1,4 +1,3 @@
-// imagem hero
 import Image from "next/image";
 import heroImage from "@/public/images/hero-image.webp";
 
@@ -11,7 +10,7 @@ export default function Home() {
       <section className="relative flex flex-col items-center justify-center h-screen text-white">
         <Image
           src={heroImage}
-          alt="Imagem Hero"
+          alt="Desenvolvedor trabalhando em um notebook em ambiente de programação"
           className="absolute inset-0 w-full h-full object-cover z-0"
         />
 
@@ -25,9 +24,29 @@ export default function Home() {
             Desenvolvedor <span className="text-blue-default">Full Stack</span>
           </p>
           <p className="text-lg md:text-xl text-gray-200">
-            Transformando ideias em códigos e tomando um cafezinho.
+            Entre códigos, ideias e café, construo aplicações web modernas.
           </p>
-          <p className="text-white">Vamos conversar?</p>
+          {/* div de links call to action */}
+          <div className="flex gap-4">
+            <Link
+              to="projetos"
+              smooth
+              offset={-64}
+              duration={500}
+              className="link-call-to-action"
+            >
+              Ver projetos
+            </Link>
+            <Link
+              to="contato"
+              smooth
+              offset={-64}
+              duration={500}
+              className="link-call-to-action"
+            >
+              Fale comigo
+            </Link>
+          </div>
         </div>
       </section>
     </>
