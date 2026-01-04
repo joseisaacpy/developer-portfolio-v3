@@ -29,12 +29,7 @@ export function ButtomPlayerSound() {
   };
   return (
     <div>
-      <audio
-        ref={audioRef}
-        src="/audios/nocturnal-slowed.mp3"
-        loop
-        preload="auto"
-      />
+      <audio ref={audioRef} src="/audios/Controlla.mp3" loop preload="auto" />
       <button
         onClick={togglePlay}
         className="fixed bottom-5 right-5 flex items-center justify-center w-12 h-12 bg-black text-white rounded-full shadow-lg hover:scale-110 hover:bg-gray-900 active:scale-95 transition-all duration-300 ease-in-out z-10"
