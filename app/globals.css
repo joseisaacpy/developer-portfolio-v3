@@ -10,37 +10,6 @@
   --color-blue-dark: #0849b2;
 }
 
-/* Fonte padrão no body */
-body {
-  overflow-x: hidden;
-}
-
-/* Largura da barra de rolagem */
-::-webkit-scrollbar {
-  width: 12px; /* largura */
-}
-
-/* Cor do trilho (fundo da barra) */
-::-webkit-scrollbar-track {
-  background: #fff; /* cor de fundo */
-}
-
-/* Cor do "thumb" (parte que desliza) */
-::-webkit-scrollbar-thumb {
-  background: var(--color-blue-default); /* cor da alça */
-  border-radius: 10px; /* bordas arredondadas */
-}
-
-/* Card tecnologia */
-.card-tecnologia {
-  @apply flex flex-col items-center justify-center gap-2 bg-white border border-blue-default shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition-all duration-300;
-}
-
-/* Card projeto */
-.card-projeto {
-  @apply flex flex-col justify-between gap-1.5 p-4 rounded-lg shadow-md bg-slate-800 text-white w-full h-full;
-}
-
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -158,4 +127,38 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Largura da barra de rolagem */
+::-webkit-scrollbar {
+  width: 12px; /* largura */
+}
+
+/* Cor do trilho (fundo da barra) */
+::-webkit-scrollbar-track {
+  background: #fff; /* cor de fundo */
+}
+
+/* Cor do "thumb" (parte que desliza) */
+::-webkit-scrollbar-thumb {
+  background: var(--color-blue-default); /* cor da alça */
+  border-radius: 10px; /* bordas arredondadas */
+}
+
+/* Card tecnologia */
+.card-tecnologia {
+  @apply flex flex-col items-center justify-center gap-2 bg-white border border-blue-default shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition-all duration-300;
+}
+
+/* Card projeto */
+.card-projeto {
+  @apply flex flex-col justify-between gap-1.5 p-4 rounded-lg shadow-md bg-slate-800 text-white w-full h-full;
+}
+
+.link-call-to-action {
+  @apply bg-blue-default text-white px-4 py-2 rounded-md hover:scale-105 transition-all duration-300 cursor-pointer;
 }
