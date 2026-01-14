@@ -2,7 +2,7 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { FaCoffee, FaLaptop } from "react-icons/fa";
 
 // Currículo para download
-const curriculoPdf = "Jose-Isaac-Estagio-TI.pdf";
+const curriculoPdf = "JOSE-ISAAC-DESENVOLVEDOR.pdf";
 
 import { toast } from "react-toastify";
 
