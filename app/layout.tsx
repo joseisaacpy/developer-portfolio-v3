@@ -6,6 +6,8 @@ import Script from "next/script";
 
 // Toast/Notificações
 import { ToastContainer } from "react-toastify";
+// Next themes
+import Providers from "./providers";
 
 // Fonte
 import { Poppins } from "next/font/google";
@@ -70,7 +72,7 @@ export default function RootLayout({
       ></Script>
       {/* Body */}
       <body className={`${poppins.className} antialiased`}>
-        {children}
+        <Providers>{children}</Providers>
         {/* Toast / Notificação */}
         <ToastContainer autoClose={700} />
       </body>
