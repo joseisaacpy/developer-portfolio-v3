@@ -1,16 +1,8 @@
 "use client";
-// Imagem de fundo
 import techsBg from "@/public/images/background-techs.webp";
-
-// Loader
 import Loader from "@/components/Loader";
-
 import { ProjetoProps } from "@/types/projeto";
-
-// Card
 import CardProjeto from "@/components/CardProjeto";
-
-// Hooks
 import { useState, useEffect } from "react";
 
 export default function Projetos() {
@@ -55,7 +47,7 @@ export default function Projetos() {
 
       <div
         id="container-projetos"
-        className="relative grid p-2 items-center justify-center m-auto grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3"
+        className="relative grid max-w-6xl p-3 items-center justify-center m-auto grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
       >
         {projetos.map((projeto) => (
           <CardProjeto

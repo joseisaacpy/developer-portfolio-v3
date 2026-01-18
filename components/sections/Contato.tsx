@@ -1,3 +1,4 @@
+'use client';
 import japanImg from "@/public/images/japan.webp";
 import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
 import { toast } from "react-toastify";

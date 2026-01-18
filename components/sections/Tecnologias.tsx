@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
 import tecnologias from "@/data/tecnologias";
 import CardTec from "../CardTec";
 // Array de categorias de tecnologias
@@ -37,8 +36,8 @@ export default function Tecnologias() {
                   } else {
                     setTecnologiaFiltrada(
                       tecnologias.filter(
-                        (tecnologia) => tecnologia.categoria === categoria
-                      )
+                        (tecnologia) => tecnologia.categoria === categoria,
+                      ),
                     );
                   }
                 }}

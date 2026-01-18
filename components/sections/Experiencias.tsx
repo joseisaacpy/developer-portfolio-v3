@@ -1,15 +1,15 @@
-// Importa a variável de experiências
+"use client";
 import { experiencias } from "@/data/experiencias";
 
 export default function Experiencias() {
   return (
     <>
       {/* Section */}
-      <section className="py-12 px-5 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         {/* Titulo */}
         <h2 className="text-3xl font-bold text-center mb-10">Experiências</h2>
         {/* Container grid */}
-        <div className="grid gap-4 grid-cols-1 md:grid-cols-3">
+        <div className="grid mx-auto max-w-6xl p-3 gap-4 grid-cols-1 md:grid-cols-3">
           {/* Map para retornar projetos */}
           {experiencias.map((exp, index) => {
             return (

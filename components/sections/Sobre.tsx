@@ -1,45 +1,25 @@
+"use client";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { FaCoffee, FaLaptop } from "react-icons/fa";
-
-// Currículo para download
-const curriculoPdf = "JOSE-ISAAC-DESENVOLVEDOR.pdf";
-
+const curriculoPdf = "Jose-Isaac-Desenvolvedor.pdf";
 import { toast } from "react-toastify";
 
 export default function Sobre() {
-  // Função para baixar currículo
-  function handleDownload() {
-    try {
-      // Checa se o caminho existe
-      if (!curriculoPdf) {
-        throw new Error("Arquivo não encontrado");
-      }
-
-      const link = document.createElement("a");
-      link.href = curriculoPdf;
-      link.download = "Jose-Isaac-Estagio-TI.pdf";
-
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-
-      toast.success("Currículo baixado com sucesso, agora vamos conversar!");
-    } catch (err) {
-      console.error(err);
-      toast.error("Ops! Não foi possível baixar o currículo.");
-    }
-  }
   return (
-    <div className="py-16 bg-white text-gray-900 mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
-      <div data-aos="fade-down" className="w-full md:w-1/3 flex justify-center">
+    <section className="py-16 bg-white text-gray-900 mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-center gap-8">
+      <div
+        data-aos="fade-down"
+        className="w-full flex justify-center items-center"
+      >
         <DotLottieReact
+          aria-hidden="true"
           src="https://lottie.host/70307135-523e-4663-93bd-03157061582f/gAH1c0RWfi.lottie"
           loop
           autoplay
         />
       </div>
 
-      <div className="w-full md:w-2/3 text-center md:text-left">
+      <div className="max-w-3xl p-2 text-center md:text-left">
         <h2
           data-aos="fade-up"
           className="text-3xl font-bold mb-4 text-blue-default"
@@ -66,14 +46,19 @@ export default function Sobre() {
         </p>
         <a
           data-aos="fade-up"
-          onClick={handleDownload}
-          target="_blank"
+          download
+          href={curriculoPdf}
+          onClick={() =>
+            toast.success(
+              "Currículo baixado com sucesso, agora vamos conversar!",
+            )
+          }
           rel="noopener noreferrer"
           className="inline-block mt-6 px-6 py-3 bg-blue-default/80 hover:bg-blue-default text-white font-medium rounded shadow transition duration-300 cursor-pointer"
         >
           Baixar Currículo
         </a>
       </div>
-    </div>
+    </section>
   );
 }
