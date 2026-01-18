@@ -130,7 +130,7 @@
 }
 
 body {
-  overflow-x: hidden;
+  @apply overflow-x-hidden;
 }
 
 /* Largura da barra de rolagem */
